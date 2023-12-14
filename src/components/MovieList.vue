@@ -4,6 +4,7 @@
       :title="movie.title"
       :originalTitle="movie.original_title"
       :language="movie.original_language"
+      :overview="movie.overview"
       :review="movie.vote_average"
     />
   </ul>
