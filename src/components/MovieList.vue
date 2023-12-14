@@ -2,9 +2,9 @@
   <ul v-for="movie in store.searchResults">
     <MovieCard
       :title="movie.title"
-      :originalTitle="movie.originalTitle"
-      :language="movie.language"
-      :review="movie.review"
+      :originalTitle="movie.original_title"
+      :language="movie.original_language"
+      :review="movie.vote_average"
     />
   </ul>
 </template>

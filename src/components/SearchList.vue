@@ -6,6 +6,7 @@
     v-model="store.searchKey"
   />
   <input type="button" value="Search" @click="$emit('search')" />
+  {{ store.searchKey }}
 </template>
 
 <script>

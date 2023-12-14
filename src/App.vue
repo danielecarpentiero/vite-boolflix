@@ -1,19 +1,35 @@
 <template>
-  <Main />
+  <SearchList @search="search" />
+  <MovieList />
 </template>
 
 <script>
-import Main from "./components/Main.vue";
+import axios from "axios";
+import SearchList from "./components/SearchList.vue";
+import MovieList from "./components/MovieList.vue";
+import { store } from "./store";
 export default {
   name: "App",
   components: {
-    Main,
+    SearchList,
+    MovieList,
   },
   data() {
-    return {};
+    return {
+      store,
+    };
   },
-  methods: {},
-  mounted() {},
+  methods: {
+    search() {
+      console.log(this.store.searchKey);
+      axios.get(this.store.movieAPI + this.store.searchKey).then((response) => {
+        this.store.searchResults = response.data.results;
+      });
+    },
+    created() {
+      this.search();
+    },
+  },
 };
 </script>
 
