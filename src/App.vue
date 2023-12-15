@@ -21,10 +21,28 @@ export default {
   },
   methods: {
     search() {
-      console.log(this.store.searchKey);
-      axios.get(this.store.movieAPI + this.store.searchKey).then((response) => {
-        this.store.searchResults = response.data.results;
-      });
+      axios
+        .get(this.store.movieAPI, {
+          params: {
+            api_key: this.store.apiKey,
+            query: this.store.searchKey,
+            language: "it-IT",
+          },
+        })
+        .then((response) => {
+          this.store.searchResults = response.data.results;
+        });
+      axios
+        .get(this.store.tvAPI, {
+          params: {
+            api_key: this.store.apiKey,
+            query: this.store.searchKey,
+            language: "it-IT",
+          },
+        })
+        .then((response) => {
+          this.store.searchResults = response.data.results;
+        });
     },
     created() {
       this.search();

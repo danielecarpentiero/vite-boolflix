@@ -1,12 +1,11 @@
 <template>
   <input
     type="text"
-    placeholder="Look for a movie"
+    placeholder="Look for a movie or a tv show"
     name="search"
     v-model="store.searchKey"
   />
   <input type="button" value="Search" @click="$emit('search')" />
-  {{ store.searchKey }}
 </template>
 
 <script>
