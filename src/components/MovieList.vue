@@ -5,6 +5,7 @@
       <MovieCard
         :title="movie.title || movie.name"
         :originalTitle="movie.original_title || movie.original_name"
+        :poster="'https://image.tmdb.org/t/p/w342' + movie.poster_path"
         :language="movie.original_language"
         :overview="movie.overview"
         :review="movie.vote_average"

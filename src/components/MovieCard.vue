@@ -2,17 +2,17 @@
   <div>
     <h2>{{ title }}</h2>
     <h3>titolo originale: {{ originalTitle }}</h3>
-    <!--   <h4><CountryFlag :country="language" /></h4> -->
+    <img :src="poster" alt="" />
     <h4 v-if="language === 'ja'">
-      <country-flag country="jp" size="medium" />
+      Lingua: <country-flag country="jp" size="medium" />
     </h4>
-    <h4 v-if="language === 'en'">
-      <country-flag country="us" size="medium" />
+    <h4 v-else-if="language === 'en'">
+      Lingua: <country-flag country="us" size="medium" />
     </h4>
-    <h4 v-if="language === 'it'">
-      <country-flag country="it" size="medium" />
+    <h4 v-else-if="language === 'it'">
+      Lingua: <country-flag country="it" size="medium" />
     </h4>
-
+    <h4 v-else>Lingua: <country-flag :country="language" size="medium" /></h4>
     <h4>Trama: {{ overview }}</h4>
     <h5>Voto: {{ review }}</h5>
   </div>
@@ -22,7 +22,7 @@
 import CountryFlag from "vue-country-flag-next";
 export default {
   name: "MovieCard",
-  props: ["title", "originalTitle", "language", "overview", "review"],
+  props: ["title", "originalTitle", "poster", "language", "overview", "review"],
   components: {
     CountryFlag,
   },
