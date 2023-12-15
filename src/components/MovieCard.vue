@@ -14,7 +14,7 @@
     </h4>
     <h4 v-else>Lingua: <country-flag :country="language" size="medium" /></h4>
     <h4>Trama: {{ overview }}</h4>
-    <h5>Voto: {{ review }}</h5>
+    <h5>Voto: {{ Math.round(review / 2) }}</h5>
   </div>
 </template>
 

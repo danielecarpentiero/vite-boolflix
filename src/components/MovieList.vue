@@ -16,6 +16,7 @@
       <MovieCard
         :title="series.name"
         :originalTitle="series.original_name"
+        :poster="'https://image.tmdb.org/t/p/w342' + series.poster_path"
         :language="series.original_language"
         :overview="series.overview"
         :review="series.vote_average"
