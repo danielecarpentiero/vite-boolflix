@@ -30,7 +30,7 @@ export default {
           },
         })
         .then((response) => {
-          this.store.searchResults = response.data.results;
+          this.store.searchMovieResults = response.data.results;
         });
       axios
         .get(this.store.tvAPI, {
@@ -41,7 +41,7 @@ export default {
           },
         })
         .then((response) => {
-          this.store.searchResults = response.data.results;
+          this.store.searchTVResults = response.data.results;
         });
     },
     created() {

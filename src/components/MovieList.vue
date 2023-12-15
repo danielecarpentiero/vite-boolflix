@@ -1,23 +1,23 @@
 <template>
   <div class="container">
     <h2 class="film">Film</h2>
-    <ul v-for="movie in store.searchResults">
+    <ul v-for="movie in store.searchMovieResults">
       <MovieCard
-        :title="movie.title"
-        :originalTitle="movie.original_title"
+        :title="movie.title || movie.name"
+        :originalTitle="movie.original_title || movie.original_name"
         :language="movie.original_language"
         :overview="movie.overview"
         :review="movie.vote_average"
       />
     </ul>
     <h2 class="tv">Serie TV</h2>
-    <ul v-for="movie in store.searchResults">
+    <ul v-for="series in store.searchTVResults">
       <MovieCard
-        :title="movie.name"
-        :originalTitle="movie.original_title"
-        :language="movie.original_language"
-        :overview="movie.overview"
-        :review="movie.vote_average"
+        :title="series.name"
+        :originalTitle="series.original_name"
+        :language="series.original_language"
+        :overview="series.overview"
+        :review="series.vote_average"
       />
     </ul>
   </div>
