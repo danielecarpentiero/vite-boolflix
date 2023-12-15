@@ -14,7 +14,9 @@
     </h4>
     <h4 v-else>Lingua: <country-flag :country="language" size="medium" /></h4>
     <h4>Trama: {{ overview }}</h4>
-    <h5>Voto: {{ Math.round(review / 2) }}</h5>
+    <div class="review">
+      <h4 v-for="n in 5">{{ Math.ceil(review / 2) }}</h4>
+    </div>
   </div>
 </template>
 
@@ -28,3 +30,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.review {
+  display: flex;
+}
+</style>
