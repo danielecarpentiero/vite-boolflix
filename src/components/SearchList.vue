@@ -1,6 +1,7 @@
 <template>
   <input
     type="text"
+    @keyup.enter="$emit('search')"
     placeholder="Look for a movie or a tv show"
     name="search"
     v-model="store.searchKey"
