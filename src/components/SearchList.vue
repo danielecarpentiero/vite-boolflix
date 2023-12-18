@@ -1,13 +1,19 @@
 <template>
   <div class="buttons">
     <input
+      class="text"
       type="text"
       @keyup.enter="$emit('search')"
       placeholder="Look for a movie or a tv show"
       name="search"
       v-model="store.searchKey"
     />
-    <input type="button" value="Search" @click="$emit('search')" />
+    <input
+      class="button"
+      type="button"
+      value="Search"
+      @click="$emit('search')"
+    />
   </div>
 </template>
 
@@ -23,4 +29,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.button {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  padding: 0 5px;
+}
+</style>

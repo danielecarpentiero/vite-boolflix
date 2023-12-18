@@ -63,7 +63,16 @@ export default {
 li {
   list-style-type: none;
   display: inline-block;
+  object-fit: cover;
   position: relative;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+span {
+  color: #f1c40f;
 }
 
 .info {
@@ -73,7 +82,7 @@ li {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px;
   width: 100%;
-  height: 98%;
+  height: 100%;
   opacity: 0;
   transition: opacity 0.3s ease;
   max-height: 100%;

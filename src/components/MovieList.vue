@@ -51,6 +51,7 @@ h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: start;
   font-size: 3rem;
+  margin: 0;
 }
 .container {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -58,8 +59,25 @@ h2 {
   justify-content: flex-start;
   flex-wrap: wrap;
   color: white;
-  ul {
+}
+
+@media only screen and (min-width: 1200px) {
+  .container ul {
     width: calc((100% / 6) - 80px);
+  }
+}
+
+/* Impostazioni per schermi medi */
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
+  .container ul {
+    width: calc((100% / 3) - 20px);
+  }
+}
+
+/* Impostazioni per schermi più piccoli */
+@media only screen and (max-width: 767px) {
+  .container ul {
+    width: calc((100% / 2) - 20px);
   }
 }
 </style>
