@@ -65,10 +65,15 @@ li {
   display: inline-block;
   object-fit: cover;
   position: relative;
+  cursor: pointer;
 }
 
 h4 {
   font-weight: 400;
+}
+
+h3 {
+  font-style: italic;
 }
 
 span {

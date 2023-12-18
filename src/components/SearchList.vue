@@ -32,6 +32,7 @@ export default {
 <style scoped>
 .button {
   margin-left: 10px;
+  cursor: pointer;
   background-color: red;
   color: white;
   padding: 0 5px;

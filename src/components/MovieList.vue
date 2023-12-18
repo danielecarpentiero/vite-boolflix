@@ -1,4 +1,7 @@
 <template>
+  <div v-if="store.searchMovieResults.length === 0" class="home">
+    Cerca qualcosa nella barra qui in alto...
+  </div>
   <div class="main-body">
     <h2 v-if="store.searchMovieResults.length !== 0" class="film">Film</h2>
     <div class="container">
@@ -46,11 +49,26 @@ export default {
 </script>
 
 <style scoped>
+.main-body {
+  background-image: url("https://miro.medium.com/v2/resize:fit:4800/format:webp/1*5lyavS59mazOFnb55Z6znQ.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home {
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
 h2 {
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: start;
   font-size: 3rem;
+  padding: 20px;
   margin: 0;
 }
 .container {

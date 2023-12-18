@@ -59,6 +59,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333333;
+  background-color: black;
 }
 </style>
